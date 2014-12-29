@@ -3,8 +3,6 @@
 import os
 import sys
 import StringIO
-import traceback
-
 
 class grub2select():
     menuCount = 1
