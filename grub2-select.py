@@ -87,7 +87,8 @@ class grub2select():
         # try to match default => menu["name"]
         for item in sorted(self.menuData):
             try:
-                matchData = self.grubDefault.split(">")[1]
+                grubDefaultSplit = self.grubDefault.split(">")
+                matchData = grubDefaultSplit[len(grubDefaultSplit)-1]
             except:
                 matchData = self.grubDefault
             if self.menuData[item]["name"].count(matchData):
